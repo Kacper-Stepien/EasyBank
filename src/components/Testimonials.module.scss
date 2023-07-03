@@ -1,0 +1,47 @@
+@import "../styles/variables.scss";
+
+.container {
+  padding: 10rem 4rem;
+  background-color: $color-light-grayish-blue;
+}
+
+.wrapper {
+  max-width: 100rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.info {
+  max-width: 60rem;
+
+  .title {
+    font-size: 3.6rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+
+  .text {
+    font-size: 1.6rem;
+    color: $color-grayish-blue;
+  }
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .testimonials {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+}

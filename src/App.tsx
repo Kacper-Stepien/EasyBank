@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
+import Testimonials from "./components/Testimonials";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <div>
         <Navbar />
         <Header />
+        <Testimonials />
       </div>
     </>
   );
