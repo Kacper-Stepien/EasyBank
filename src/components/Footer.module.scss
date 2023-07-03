@@ -1,0 +1,71 @@
+@import "../styles/variables.scss";
+
+.container {
+  padding: 4rem;
+  background-color: $color-dark-blue;
+  color: $color-white;
+}
+
+.wrapper {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  &:last-child {
+    grid-column: 4/-1;
+    align-items: flex-end;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.6rem;
+}
+
+.link {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: $color-white;
+  text-align: start;
+
+  &:hover {
+    color: $color-lime-green;
+  }
+}
+
+.copyrigth {
+  font-size: 1.4rem;
+  color: $color-grayish-blue;
+}
+
+@media only screen and (max-width: 700px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, max-content);
+    align-items: center;
+  }
+
+  .column {
+    align-items: center;
+
+    &:last-child {
+      grid-column: 1/-1;
+      grid-row: 4/5;
+      align-items: center;
+    }
+  }
+
+  .link {
+    text-align: center;
+  }
+}
