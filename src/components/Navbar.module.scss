@@ -1,12 +1,23 @@
 @import "../styles/variables.scss";
 
+.container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $color-white;
+  z-index: 100;
+}
+
 .navbar {
-  max-width: 110rem;
+  max-width: 120rem;
   height: 8rem;
+  padding: 0 4rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   background-color: $color-white;
+  z-index: 10;
 }
