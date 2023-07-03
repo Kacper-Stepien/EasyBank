@@ -1,5 +1,5 @@
-import Logo from "./Logo";
-import Button from "./Button";
+import Logo from "./utils/Logo";
+import Button from "./utils/Button";
 import Navigation from "./Navigation";
 
 import classes from "./Navbar.module.scss";
