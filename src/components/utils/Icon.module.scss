@@ -1,6 +1,19 @@
+@import "../../styles/variables.scss";
+
 .button {
   border: none;
   outline: none;
   background-color: transparent;
   cursor: pointer;
+  transition: $transition-quick;
+
+  &:hover {
+    span {
+      svg {
+        path {
+          fill: $color-lime-green;
+        }
+      }
+    }
+  }
 }

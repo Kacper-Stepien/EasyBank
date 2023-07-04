@@ -5,19 +5,29 @@
   top: 0;
   left: 0;
   right: 0;
+  padding: 0 4rem;
   background-color: $color-white;
   z-index: 100;
 }
 
 .navbar {
   max-width: 120rem;
+  width: 100%;
   height: 8rem;
-  padding: 0 4rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   background-color: $color-white;
-  z-index: 10;
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    padding: 0;
+  }
+
+  .navbar {
+    padding: 0 4rem;
+  }
 }

@@ -2,7 +2,8 @@
 
 .container {
   height: calc(100vh - 8rem);
-
+  width: 100%;
+  padding: 0 4rem;
   background-color: $color-light-gray;
   background-image: url("images/bg-intro-desktop.svg");
   background-repeat: no-repeat;
@@ -11,24 +12,24 @@
 
 .wrapper {
   height: 100%;
-  max-width: 100%;
+  max-width: 120rem;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: stretch;
   gap: 4rem;
 }
 
 .column {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: stretch;
 }
 
 .info {
-  margin: 0 auto;
   max-width: 40rem;
-  padding-left: 4rem;
   align-items: self-start;
   gap: 2.6rem;
   z-index: 5;
@@ -48,14 +49,14 @@
 
   width: 50vw;
   position: relative;
-  // overflow: hidden;
 
   img {
     min-width: 50rem;
+    max-width: 180rem;
     width: 100%;
     transform: translateX(10rem);
     position: absolute;
-    right: -10%;
+    right: -15%;
     z-index: 1;
   }
 }
@@ -69,8 +70,8 @@
   .wrapper {
     flex-direction: column-reverse;
     justify-content: center;
-    align-items: center;
-    padding: 2rem;
+    align-items: flex-start;
+    padding: 4rem 0;
   }
 
   .column {
@@ -86,10 +87,23 @@
     align-items: flex-end;
     justify-content: flex-end;
     text-align: center;
+    img {
+      min-width: 20rem;
+      transform: none;
+      position: static !important;
+      transform: none !important;
+    }
   }
-  img {
-    transform: none;
-    position: static !important;
-    transform: none !important;
+}
+
+@media only screen and (max-width: 350px) {
+  .info {
+    .padding-top: 2rem;
+
+    .heading {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: $color-dark-blue;
+    }
   }
 }
